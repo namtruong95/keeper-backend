@@ -20,10 +20,18 @@ const apiPrefix = '/api'
 
 Route.on('/').render('welcome')
 
+Route.group('unauthenticated', () => {
+  /**
+   * Sessions
+   */
+  Route.post('oauth/login', 'AuthController.login')
+})
+.prefix(apiPrefix)
+
 Route.group('auth', () => {
   /**
    * Users
    */
-  Route.get('users', 'UserController.index');
-  })
-  .prefix(apiPrefix)
+  Route.get('users', 'UserController.index')
+})
+.prefix(apiPrefix)

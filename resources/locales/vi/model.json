@@ -1,0 +1,5 @@
+{
+  "errors.required": "Vui lòng nhập",
+  "errors.invalid": "sai định dạng",
+  "errors.less_than_or_equal_to": "phải nhỏ hơn hoặc bằng {{argument.0}} ký tự"
+}

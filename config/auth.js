@@ -17,7 +17,7 @@ module.exports = {
   | Available Serializers - Lucid, Database
   |
   */
-  authenticator: 'session',
+  authenticator: 'redisjwt',
 
   /*
   |--------------------------------------------------------------------------
@@ -70,6 +70,18 @@ module.exports = {
     secret: Config.get('app.appKey')
   },
 
+  redisjwt: {
+    serializer: 'Lucid',
+    model: 'App/Model/User',
+    scheme: 'redisJwt',
+    uid: 'email',
+    password: 'password',
+    secret: Config.get('app.appKey'),
+    options: {
+      expiresIn: '7d',
+      issuer: ['oauth:login']
+    }
+  },
   /*
   |--------------------------------------------------------------------------
   | API Authenticator

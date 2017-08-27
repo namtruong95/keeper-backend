@@ -19,3 +19,9 @@
 | })
 |
 */
+const Ioc = use('adonis-fold').Ioc
+const RedisJwtScheme = require('./schemes/RedisJwt')
+
+Ioc.extend('Adonis/Src/AuthManager', 'redisJwt', function (app) {
+  return RedisJwtScheme
+}, 'scheme')
