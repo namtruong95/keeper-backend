@@ -37,27 +37,6 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | MySQL
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MySQL database.
-  |
-  | npm i --save mysql
-  |
-  */
-  mysql: {
-    client: 'mysql',
-    connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      port: Env.get('DB_PORT', ''),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
-    }
-  },
-
-  /*
-  |--------------------------------------------------------------------------
   | PostgreSQL
   |--------------------------------------------------------------------------
   |
@@ -68,13 +47,7 @@ module.exports = {
   */
   pg: {
     client: 'pg',
-    connection: {
-      host: 'ec2-50-19-218-160.compute-1.amazonaws.com',
-      port: 5432,
-      user: 'dtnxsitnhvtjcy',
-      password: '35b31657320a71f838c89c4b584aa854c0760f07467ef8c180096ce48ee2415f',
-      database: 'd1duvlkvja3n3i'
-    }
+    connection: process.env.DATABASE_URL || 'postgres://kvldydsmbyhyen:c4c50585d0a2cac6325cb5a41229685e39de4944f859a246ab6e8b33564aa28b@ec2-107-22-251-55.compute-1.amazonaws.com:5432/d2clihccs5lf40'
   }
 
 }
