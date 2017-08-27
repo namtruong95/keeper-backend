@@ -22,7 +22,7 @@ module.exports = {
   | Redis connection to be used by default.
   |
   */
-  connection: Env.get('REDIS_CONNECTION', 'local'),
+  // connection: Env.get('REDIS_CONNECTION', 'local'),
 
   /*
   |--------------------------------------------------------------------------
@@ -33,11 +33,11 @@ module.exports = {
   |
   */
   local: {
-    host: Env.get('CACHE_HOST', '127.0.0.1'),
-    port: Env.get('CACHE_PORT', 6379),
+    host: Env.get('CACHE_HOST'),
+    port: Env.get('CACHE_PORT'),
     password: null,
     db: 0,
-    keyPrefix: Env.get('CACHE_PREFIX', '')
+    keyPrefix: Env.get('CACHE_PREFIX')
   },
 
   /*

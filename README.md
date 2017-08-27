@@ -1,3 +1,7 @@
+# Deploy App
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # AdonisJs Application
 
 This repo is the pre-configured project structure to be used for creating ambitious web servers using AdonisJs.
@@ -6,7 +10,7 @@ This repo is the pre-configured project structure to be used for creating ambiti
 
 ## Story
 
-One day a :boy: wanted to write a web application to slowly turn it into a business and make some :moneybag: for better living. Being a Javascript lover, he decided to go with Node.js. 
+One day a :boy: wanted to write a web application to slowly turn it into a business and make some :moneybag: for better living. Being a Javascript lover, he decided to go with Node.js.
 
 Hosting Node.js applications are cheap and offers lots of mordern programming concepts to build realtime data rich applications.
 
@@ -25,7 +29,7 @@ He was so excited and full of energy to build this application and share it with
 
 This is so frustating. Node.js is a beautiful language but all of the above questions have never been answered together. We all love writing small concise modules but business are not created by downloading 20 modules.
 
-Developers needs productive tools, so that they can focus on what matters, and not on downloading & finding the best ways to combine these small modules. 
+Developers needs productive tools, so that they can focus on what matters, and not on downloading & finding the best ways to combine these small modules.
 
 ## AdonisJs
 
