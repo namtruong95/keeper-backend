@@ -14,6 +14,22 @@
     "DB_CONNECTION": {
       "description": "The database type to connect to.",
       "value": "pg"
+    },
+    "HOST": {
+      "description": "The host",
+      "value": "localhost"
+    },
+    "PORT": {
+      "description": "The port",
+      "value": "3333"
+    },
+    "SESSION_DRIVER": {
+      "description": "Session driver",
+      "value": "cookie"
+    },
+    "CACHE_VIEWS": {
+      "description": "Cache views",
+      "value": "false"
     }
   }
 }
