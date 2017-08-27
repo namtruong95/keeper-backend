@@ -27,7 +27,7 @@ JwtTokenService.generateNewAccountToken = function (payload = {}) {
       issuer: Credential.ISSUERS.LOGIN
     }
 
-    jwt.sign({ context: payload.context }, process.env.APP_KEY, options, function (error, token) {
+    jwt.sign({ context: payload.context }, Env.get('APP_KEY'), options, function (error, token) {
       if (error) {
         return reject(error)
       }
