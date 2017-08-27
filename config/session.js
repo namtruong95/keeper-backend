@@ -1,7 +1,5 @@
 'use strict'
 
-const Env = use('Env')
-
 module.exports = {
   /*
   |--------------------------------------------------------------------------
@@ -14,7 +12,7 @@ module.exports = {
   | Available Options are :-
   | cookie, file, redis
   */
-  driver: Env.get('SESSION_DRIVER', 'cookie'),
+  driver: process.env.SESSION_DRIVER,
 
   /*
   |--------------------------------------------------------------------------
@@ -27,7 +25,7 @@ module.exports = {
   */
   cookie: 'adonis-session',
 
-  
+
   /*
   |--------------------------------------------------------------------------
   | Redis options
@@ -48,7 +46,7 @@ module.exports = {
     db: 0
   },
 
-  
+
   /*
   |--------------------------------------------------------------------------
   | Session Age

@@ -1,6 +1,5 @@
 'use strict'
 
-const Env = use('Env')
 const Youch = use('youch')
 
 const Response = use('Adonis/Src/Response')
