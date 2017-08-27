@@ -8,7 +8,10 @@
     "migrate": "node --harmony_proxies ace migration:run --force",
     "rollback": "node --harmony_proxies ace migration:rollback --force",
     "seed": "node --harmony_proxies ace db:seed --force",
-    "refresh": "node --harmony_proxies ace migration:refresh --force"
+    "refresh": "node --harmony_proxies ace migration:refresh --force",
+    "serve:dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "serve": "node server.js",
+    "lint": "standard"
   },
   "author": "",
   "license": "MIT",
