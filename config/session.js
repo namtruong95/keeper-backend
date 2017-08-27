@@ -14,7 +14,7 @@ module.exports = {
   | Available Options are :-
   | cookie, file, redis
   */
-  driver: process.env.SESSION_DRIVER,
+  driver: Env.get('SESSION_DRIVER'),
 
   /*
   |--------------------------------------------------------------------------
