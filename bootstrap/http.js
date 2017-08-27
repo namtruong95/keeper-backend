@@ -42,6 +42,7 @@ module.exports = function (callback) {
       |
       */
       const Helpers = use('Helpers')
+      const Env = use('Env')
       Helpers.load(packageFile, fold.Ioc)
 
       /*
@@ -99,7 +100,7 @@ module.exports = function (callback) {
       |
       */
       const Server = use('Adonis/Src/Server')
-      Server.listen(process.env.HOST, process.env.PORT)
+      Server.listen(Env.get('HOST'), Env.get('PORT'))
       if (typeof (callback) === 'function') {
         callback()
       }

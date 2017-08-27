@@ -10,6 +10,7 @@
 |
 */
 
+const Env = use('Env')
 
 module.exports = {
 
