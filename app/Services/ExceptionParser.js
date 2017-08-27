@@ -64,7 +64,7 @@ ExceptionParser.send = (error, request, response) => {
   const handler = handlers[error.name] || handlers.default
 
   // Log error on development mode
-  if (Env.get('NODE_ENV') === 'development') {
+  if (process.env.NODE_ENV === 'development') {
     console.log(error, error.message)
   }
 
