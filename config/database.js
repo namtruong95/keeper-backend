@@ -14,7 +14,7 @@ module.exports = {
   | interacting with SQL databases.
   |
   */
-  connection: Env.get('DB_CONNECTION', 'sqlite'),
+  connection: Env.get('DB_CONNECTION', 'pg'),
 
   /*
   |--------------------------------------------------------------------------
@@ -68,13 +68,7 @@ module.exports = {
   */
   pg: {
     client: 'pg',
-    connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      port: Env.get('DB_PORT', ''),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
-    }
+    connection: process.env.DATABASE_URL || 'postgres://jigsmugciiuyqe:e8692bb2ba59fd4bac4f06a853cb0da74678c66bda8a9d5acd5c457349584662@ec2-54-163-254-143.compute-1.amazonaws.com:5432/da9kaad5fts9qk'
   }
 
 }
