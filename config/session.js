@@ -1,5 +1,7 @@
 'use strict'
 
+const Env = use('Env')
+
 module.exports = {
   /*
   |--------------------------------------------------------------------------
@@ -12,7 +14,7 @@ module.exports = {
   | Available Options are :-
   | cookie, file, redis
   */
-  driver: process.env.SESSION_DRIVER,
+  driver: Env.get('SESSION_DRIVER', 'cookie'),
 
   /*
   |--------------------------------------------------------------------------

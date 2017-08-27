@@ -1,5 +1,7 @@
 'use strict'
 
+const Env = use('Env')
+
 module.exports = {
 
   /*
@@ -11,7 +13,7 @@ module.exports = {
   | to encrypted cookies, sessions and other sensitive data.
   |
   */
-  appKey: process.env.APP_KEY,
+  appKey: Env.get('APP_KEY'),
 
   encryption: {
     /*
@@ -104,7 +106,7 @@ module.exports = {
     | production to optimize view loading time.
     |
     */
-    cache: true,
+    cache: Env.get('CACHE_VIEWS', true),
 
     /*
     |--------------------------------------------------------------------------
