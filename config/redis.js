@@ -33,11 +33,11 @@ module.exports = {
   |
   */
   local: {
-    host: process.env.CACHE_HOST,
-    port: process.env.CACHE_PORT,
+    host: Env.get('CACHE_HOST'),
+    port: Env.get('CACHE_PORT'),
     password: null,
     db: 0,
-    keyPrefix: process.env.CACHE_PREFIX
+    keyPrefix: Env.get('CACHE_PREFIX')
   },
 
   /*
