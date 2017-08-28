@@ -34,4 +34,5 @@ Route.group('auth', () => {
    */
   Route.get('users', 'UserController.index')
 })
+.middleware(['auth:redisjwt'])
 .prefix(apiPrefix)
