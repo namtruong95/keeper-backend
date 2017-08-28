@@ -15,7 +15,7 @@ class JwtAuth extends Auth {
       yield this._tryFail(request, authenticators)
 
       if (request.jwtPayload &&
-          [Credential.ISSUERS.COMPANY_ACCOUNT, Credential.ISSUERS.INVITATION].indexOf(request.jwtPayload.iss) > -1) {
+          [Credential.ISSUERS.LOGIN].indexOf(request.jwtPayload.iss) > -1) {
         throw new Exceptions.ApplicationException(Antl.get('common.errors.verification_not_found'), 400)
       }
 
