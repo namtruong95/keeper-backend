@@ -45,6 +45,12 @@ class AuthController {
       expires_on: expiry
     })
   }
+
+  * logout (req, res) {
+    const lifetime = req.jwtPayload.exp * 1000 - (new Date()).getTime()
+    this.JwtTokenService.revokeToken(req.currentUser.id, req.jwtPayload.context.jwtid, lifetime)
+    res.success({ success: true })
+  }
 }
 
 module.exports = AuthController
