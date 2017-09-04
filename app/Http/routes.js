@@ -29,10 +29,21 @@ Route.group('unauthenticated', () => {
 .prefix(apiPrefix)
 
 Route.group('auth', () => {
+
+  Route
   /**
    * Users
    */
-  Route.get('users', 'UserController.index')
+  .get('users', 'UserController.index')
+  /**
+   * Accounts
+   */
+  .get('accounts', 'AccountController.index')
+  .post('accounts', 'AccountController.store')
+  .get('accounts/:account_id', 'AccountController.show')
+  .put('accounts/:account_id', 'AccountController.update')
+  .delete('accounts/:account_id', 'AccountController.destroy')
+
 })
 .middleware(['auth:redisjwt'])
 .prefix(apiPrefix)

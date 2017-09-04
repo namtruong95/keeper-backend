@@ -1,4 +1,6 @@
 {
+  "account": "tài khoản",
+  "not_found": "Không tìm thấy {name}",
   "errors.unexpected_error": "Đã xảy ra lỗi. Vui lòng thử lại",
   "errors.expired_session": "Thông tin xác thực không hợp lệ",
   "errors.verification_not_found": "Không tìm thấy ứng dụng"
