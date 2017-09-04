@@ -32,6 +32,10 @@ Route.group('auth', () => {
 
   Route
   /**
+   * Logout
+   */
+  .get('oauth/logout', 'AuthController.logout')
+  /**
    * Users
    */
   .get('users', 'UserController.index')
